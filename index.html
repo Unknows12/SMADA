@@ -71,9 +71,10 @@
         x-data="{
             activeCategory: 'all',
             search: '',
-            selectedItem: null,
+            openProgja: {},
             items: [
                 {
+                    id: 'osis',
                     name: 'OSIS SMAN 2 Purwokerto (Dharmasena)',
                     category: 'organisasi',
                     desc: 'Organisasi siswa intra sekolah utama yang menaungi koordinasi kesiswaan, penertiban, kebersihan lingkungan, serta event besar seperti Smada Expo, Bulan Bahasa, dan Classmeeting.',
@@ -81,6 +82,7 @@
                     badge: 'Organisasi Utama'
                 },
                 {
+                    id: 'mpk',
                     name: 'MPK (Musyawarah Perwakilan Kelas)',
                     category: 'organisasi',
                     desc: 'Organisasi independen yang mengawasi jalannya kinerja OSIS, menindaklanjuti aspirasi warga sekolah, serta memegang fungsi evaluasi dan anggaran melalui forum khusus.',
@@ -88,6 +90,7 @@
                     badge: 'Organisasi Pengawas'
                 },
                 {
+                    id: 'pmr',
                     name: 'PMR Wira SMAN 2 Purwokerto (Tengu Army)',
                     category: 'organisasi',
                     desc: 'Organisasi yang bergerak di bidang kesehatan dan sosial kemanusiaan, bertindak sebagai tim medis siaga dalam penanganan kecelakaan dan kegiatan sekolah.',
@@ -95,6 +98,7 @@
                     badge: 'Organisasi Kemanusiaan'
                 },
                 {
+                    id: 'pramuka',
                     name: 'Pramuka (Ambalan Garuda-Shima)',
                     category: 'organisasi',
                     desc: 'Gugus depan kepramukaan tertua di eks-Keresidenan Banyumas yang berfokus pada pendidikan kedisiplinan, kepemimpinan, dan pembentukan karakter.',
@@ -102,6 +106,7 @@
                     badge: 'Organisasi Wajib'
                 },
                 {
+                    id: 'paspara',
                     name: 'PASPARA (Pasukan Pengibar Bendera)',
                     category: 'organisasi',
                     desc: 'Organisasi paskibra yang mengemban tugas pengibaran bendera, pembinaan kedisiplinan, baris-berbaris, tata upacara, dan penanaman nilai solidaritas.',
@@ -109,6 +114,7 @@
                     badge: 'Organisasi Kedisiplinan'
                 },
                 {
+                    id: 'adiwiyata',
                     name: 'Adiwiyata (Perivallon)',
                     category: 'organisasi',
                     desc: 'Organisasi pengembangan lingkungan hidup yang mewujudkan kelestarian dan kepedulian ekologis warga sekolah hingga tingkat Adiwiyata Nasional.',
@@ -116,6 +122,7 @@
                     badge: 'Lingkungan Hidup'
                 },
                 {
+                    id: 'coscoda',
                     name: 'COSCODA',
                     category: 'organisasi',
                     desc: 'Community of Social Science Olympiad of Smada yang bergerak di bidang olimpiade sains dan sosial serta pengembangan potensi akademik anggota ke jenjang nasional.',
@@ -123,6 +130,7 @@
                     badge: 'Olimpiade & Akademik'
                 },
                 {
+                    id: 'pikr',
                     name: 'PIK-R Sejahtera',
                     category: 'organisasi',
                     desc: 'Pusat Informasi dan Konseling Remaja yang mewadahi program penyiapan kehidupan berkeluarga bagi remaja melalui layanan Konselor Sebaya.',
@@ -130,6 +138,7 @@
                     badge: 'Kesehatan & Konseling'
                 },
                 {
+                    id: 'rohis',
                     name: 'ROHIS (Rohani Islam Exist)',
                     category: 'organisasi',
                     desc: 'Organisasi keagamaan yang memperdalam pemahaman Islam melalui kegiatan kreatif, pengajian, literasi keagamaan, dan keputrian.',
@@ -137,6 +146,7 @@
                     badge: 'Keagamaan'
                 },
                 {
+                    id: 'katris',
                     name: 'KATRIS (Rohani Katolik-Kristen)',
                     category: 'organisasi',
                     desc: 'Organisasi kerohanian yang menjadi wadah pembinaan iman, perayaan hari besar, retret, serta pendalaman alkitab bagi siswa beragama Katolik dan Kristen.',
@@ -144,6 +154,7 @@
                     badge: 'Keagamaan'
                 },
                 {
+                    id: 'muma',
                     name: 'MUMA (Multimedia of Smada)',
                     category: 'ekskul',
                     desc: 'Ekstrakurikuler di bidang desain grafis, perancangan poster, dan pengeditan foto menggunakan perangkat lunak profesional seperti Photoshop, CorelDraw, dan Illustrator.',
@@ -151,6 +162,7 @@
                     badge: 'Seni & Teknologi'
                 },
                 {
+                    id: 'jump',
                     name: 'JUMP (Journalist Union of Smada)',
                     category: 'ekskul',
                     desc: 'Wadah pengembangan bakat di bidang jurnalistik, peliputan berita, pengelolaan mading bulanan, penulisan cerita, dan media informasi interaktif.',
@@ -158,6 +170,7 @@
                     badge: 'Literasi & Media'
                 },
                 {
+                    id: 'esbanda',
                     name: 'ESBANDA (Ekstrakurikuler Band)',
                     category: 'ekskul',
                     desc: 'Wadah penyaluran bakat di bidang musik modern yang rutin mengisi pementasan live music internal maupun eksternal sekolah.',
@@ -165,6 +178,7 @@
                     badge: 'Seni Musik'
                 },
                 {
+                    id: 'esvo',
                     name: 'ESVO (Smada\'s Voice)',
                     category: 'ekskul',
                     desc: 'Ekstrakurikuler paduan suara resmi sekolah yang mendalami teknik vokal, pengiringan upacara, hingga pementasan seremonial kelulusan.',
@@ -172,6 +186,7 @@
                     badge: 'Seni Suara'
                 },
                 {
+                    id: 'nuswantara',
                     name: 'Nuswantara Doea',
                     category: 'ekskul',
                     desc: 'Ekstrakurikuler seni tari tradisional, khususnya tari Banyumasan, yang mempelajari olah tubuh, tata rias, kostum, dan unsur pementasan budaya.',
@@ -179,6 +194,7 @@
                     badge: 'Seni Budaya'
                 },
                 {
+                    id: 'sekarnada',
                     name: 'Sekarnada',
                     category: 'ekskul',
                     desc: 'Ekstrakurikuler seni karawitan yang mendalami berbagai instrumen gamelan jawa dan pengiringan pagelaran seni tradisional.',
@@ -186,6 +202,7 @@
                     badge: 'Seni Tradisional'
                 },
                 {
+                    id: 'teater',
                     name: 'Teater Pijar',
                     category: 'ekskul',
                     desc: 'Seni pementasan drama, penulisan naskah, teknik peran, tata busana, panggung, hingga pembacaan puisi dan monolog.',
@@ -193,6 +210,7 @@
                     badge: 'Seni Teater'
                 },
                 {
+                    id: 'fos',
                     name: 'FOS (Focus of Smada)',
                     category: 'ekskul',
                     desc: 'Ekstrakurikuler fotografi dan videografi yang mempelajari teknik pengambilan gambar, komposisi, penyutradaraan, hingga pascaproduksi dokumentasi event sekolah.',
@@ -200,6 +218,7 @@
                     badge: 'Media & Kreatif'
                 },
                 {
+                    id: 'bola',
                     name: 'BOLA SMADA',
                     category: 'ekskul',
                     desc: 'Wadah pengembangan minat dan bakat dalam cabang olahraga sepak bola serta penyelenggaraan turnamen olahraga pelajar.',
@@ -207,6 +226,7 @@
                     badge: 'Olahraga'
                 },
                 {
+                    id: 'mp',
                     name: 'Merpati Putih (MP)',
                     category: 'ekskul',
                     desc: 'Ekstrakurikuler pencak silat yang melatih teknik bela diri, fisik, pernapasan, serta pembinaan prestasi kejuaraan.',
@@ -214,6 +234,7 @@
                     badge: 'Bela Diri'
                 },
                 {
+                    id: 'thunder',
                     name: 'THUNDER',
                     category: 'ekskul',
                     desc: 'Ekstrakurikuler bola basket yang aktif melaksanakan latihan tanding, pengembangan strategi, serta kepanitiaan teknis pertandingan.',
@@ -221,6 +242,7 @@
                     badge: 'Olahraga'
                 },
                 {
+                    id: 'volda',
                     name: 'VOLDA (Voli Smada)',
                     category: 'ekskul',
                     desc: 'Ekstrakurikuler olahraga bola voli yang berfokus pada teknik permainan, kerja sama tim, dan peningkatan prestasi kejuaraan.',
@@ -228,6 +250,7 @@
                     badge: 'Olahraga'
                 },
                 {
+                    id: 'handball',
                     name: 'HANDBALL (Doeahandball)',
                     category: 'ekskul',
                     desc: 'Olahraga bola tangan yang melatih koordinasi, taktik penyerangan/pertahanan, dan kerja sama tim hingga tingkat kejuaraan nasional.',
@@ -235,6 +258,7 @@
                     badge: 'Olahraga'
                 },
                 {
+                    id: 'southeast',
                     name: 'SOUTHEAST (Softball Smada)',
                     category: 'ekskul',
                     desc: 'Ekstrakurikuler softball yang melatih kekuatan fisik, akurasi lempar-tangkap, batting, fielding, dan strategi permainan.',
@@ -242,6 +266,7 @@
                     badge: 'Olahraga'
                 },
                 {
+                    id: 'excisiors',
                     name: 'EXCELSIORS',
                     category: 'ekskul',
                     desc: 'Ekstrakurikuler kebahasaan dan sastra Inggris yang terbagi dalam departemen Debate, Entertainment, dan Journalism.',
@@ -249,6 +274,7 @@
                     badge: 'Akademik & Bahasa'
                 },
                 {
+                    id: 'sos',
                     name: 'SOS (Saman of Smada)',
                     category: 'ekskul',
                     desc: 'Ekstrakurikuler tari Saman tingkat SMA di Banyumas yang melatih kekompakan ritme gerak dan pementasan seni budaya.',
@@ -256,6 +282,7 @@
                     badge: 'Seni Budaya'
                 },
                 {
+                    id: 'chaos',
                     name: 'CHAOS (Creative House Art of Smada)',
                     category: 'ekskul',
                     desc: 'Ekstrakurikuler seni rupa (menggambar anatomi, pemandangan, komik, poster) serta penyelenggaraan pameran karya seni rupa.',
@@ -263,6 +290,7 @@
                     badge: 'Seni Rupa'
                 },
                 {
+                    id: 'qof',
                     name: 'QOF (Quranic Generation of Smada)',
                     category: 'ekskul',
                     desc: 'Ekstrakurikuler keagamaan yang berfokus pada pendalaman dan hafalan ayat-ayat Al-Quran serta kegiatan dakwah sosial.',
@@ -270,14 +298,16 @@
                     badge: 'Keagamaan'
                 },
                 {
+                    id: 'smartkir',
                     name: 'SMART-KIR (Smada Research Team)',
                     category: 'ekskul',
                     desc: 'Keluarga ilmiah remaja tempat menyalurkan eksperimen ilmiah, penelitian, dan penemuan baru di bawah naungan COSCODA.',
                     progja: ['Penelitian Ilmiah Remaja', 'Lomba Karya Tulis Ilmiah (LKTI) & FIKSI'],
                     badge: 'Akademik & Riset'
                 }
-            ]"
-        >
+            ]
+        }"
+    >
         <!-- Filter Bar -->
         <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
             <button @click="activeCategory = 'all'" :class="activeCategory === 'all' ? 'bg-smadaRed text-white shadow-lg shadow-smadaRed/30' : 'bg-smadaCard text-gray-400 hover:text-white border border-smadaGray'" class="px-5 py-2.5 rounded-xl text-sm font-medium transition">
@@ -298,43 +328,35 @@
 
         <!-- Grid Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <template x-for="item in items.filter(i => (activeCategory === 'all' || i.category === activeCategory) && i.name.toLowerCase().includes(search.toLowerCase()))" :key="item.name">
-                <div class="bg-smadaCard border border-smadaGray rounded-2xl p-6 flex flex-col justify-between hover:border-smadaRed/50 transition group">
+            <template x-for="item in items.filter(i => (activeCategory === 'all' || i.category === activeCategory) && i.name.toLowerCase().includes(search.toLowerCase()))" :key="item.id">
+                <div class="bg-smadaCard border border-smadaGray rounded-2xl p-6 flex flex-col justify-between hover:border-smadaRed/50 transition">
                     <div>
                         <div class="flex items-center justify-between mb-4">
                             <span class="px-3 py-1 rounded-full text-xs font-semibold bg-smadaGray text-gray-300 border border-gray-700" x-text="item.badge"></span>
                             <span class="text-xs uppercase tracking-wider text-gray-500 font-bold" x-text="item.category"></span>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-smadaRed transition" x-text="item.name"></h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6 line-clamp-3" x-text="item.desc"></p>
+                        <h3 class="text-xl font-bold text-white mb-3" x-text="item.name"></h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6" x-text="item.desc"></p>
+                        
+                        <!-- Daftar Progja Inline (Muncul saat tombol diklik) -->
+                        <div x-show="openProgja[item.id]" x-transition class="mb-6 pt-4 border-t border-smadaGray">
+                            <h4 class="text-xs font-bold text-smadaRed uppercase tracking-wider mb-3">Program Kerja Utama:</h4>
+                            <ul class="space-y-2">
+                                <template x-for="prog in item.progja">
+                                    <li class="flex items-start text-sm text-gray-300">
+                                        <span class="text-smadaRed mr-2 font-bold">•</span>
+                                        <span x-text="prog"></span>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
                     </div>
-                    <button @click="selectedItem = item" class="w-full py-2.5 rounded-xl bg-smadaGray text-sm font-semibold text-gray-200 hover:bg-smadaRed hover:text-white transition flex items-center justify-center space-x-2">
-                        <span>Lihat Program Kerja</span>
+
+                    <button @click="openProgja[item.id] = !openProgja[item.id]" class="w-full py-2.5 rounded-xl bg-smadaGray text-sm font-semibold text-gray-200 hover:bg-smadaRed hover:text-white transition flex items-center justify-center space-x-2">
+                        <span x-text="openProgja[item.id] ? 'Tutup Program Kerja' : 'Lihat Program Kerja'"></span>
                     </button>
                 </div>
             </template>
-        </div>
-
-        <!-- Modal Detail -->
-        <div x-show="selectedItem" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" style="display: none;" x-transition>
-            <div @click.away="selectedItem = null" class="bg-smadaCard border border-smadaGray rounded-2xl max-w-lg w-full p-6 sm:p-8 relative">
-                <button @click="selectedItem = null" class="absolute top-6 right-6 text-gray-400 hover:text-white font-bold text-lg">✕</button>
-                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-smadaRed/10 text-smadaRed border border-smadaRed/20 inline-block mb-3" x-text="selectedItem?.badge"></span>
-                <h2 class="text-2xl font-bold text-white mb-3" x-text="selectedItem?.name"></h2>
-                <p class="text-gray-300 text-sm leading-relaxed mb-6" x-text="selectedItem?.desc"></p>
-                <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-3">Program Kerja Utama:</h4>
-                <ul class="space-y-2 mb-6">
-                    <template x-for="prog in selectedItem?.progja">
-                        <li class="flex items-start text-sm text-gray-400">
-                            <span class="text-smadaRed mr-2 font-bold">•</span>
-                            <span x-text="prog"></span>
-                        </li>
-                    </template>
-                </ul>
-                <button @click="selectedItem = null" class="w-full py-3 rounded-xl bg-smadaGray text-sm font-semibold text-white hover:bg-gray-700 transition">
-                    Tutup
-                </button>
-            </div>
         </div>
     </section>
 
